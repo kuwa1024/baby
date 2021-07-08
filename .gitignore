@@ -1,0 +1,5 @@
+env.php
+templates_c/*
+!templates_c/.gitkeep
+vendor
+*.code-workspace

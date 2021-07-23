@@ -1,4 +1,4 @@
-env.php
+configs/db.php
 templates_c/*
 !templates_c/.gitkeep
 vendor

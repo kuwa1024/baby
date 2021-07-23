@@ -4,7 +4,7 @@ require_once dirname(__FILE__) . '/configs/config.php';
 // バリデーション
 $timing_id = intval($_POST['timing_id']);
 $date = $_POST['date'];
-$time = $_POST['time'];
+$time = str_replace(' ', '', $_POST['time']);
 $type_id = intval($_POST['type_id']);
 $subtype_id = intval($_POST['subtype_id']);
 

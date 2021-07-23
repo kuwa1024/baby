@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/wickedpicker@0.4.3/dist/wickedpicker.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/wickedpicker@0.4.3/dist/wickedpicker.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -41,9 +43,9 @@
       $('#date').datepicker({
         dateFormat: 'yy/mm/dd'
       });
-      $('#time').timepicker({
-        timeFormat: 'HH:mm',
-        interval: 1,
+      $('#time').wickedpicker({
+        now: '{$timing.datetime|date_format:"%H:%M"}',
+        twentyFour: true
       });
     })
   </script>
@@ -65,7 +67,7 @@
           </div>
           <div class="col">
             <input type="text" class="form-control" id="time" name="time"
-              value="{$timing.datetime|date_format:'%H:%M'}">
+              value="">
           </div>
         </div>
         <div class="row mb-3">
